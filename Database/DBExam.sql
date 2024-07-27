@@ -6,8 +6,8 @@ where len(Fname) > 3
 
 
 /* 2-	Write a query to display the total number of Programming books 
-available in the library with alias name ‘NO OF PROGRAMMING
-BOOKS’*/
+available in the library with alias name â€˜NO OF PROGRAMMING
+BOOKSâ€™*/
 select Count(C.Cat_name) as 'NO OF PROGRAMMING Books'
 from Book B inner join Category C
 ON C.Id = B.Cat_id 
@@ -107,7 +107,7 @@ group by F.Number, F.Num_blocks
 
 
 /* 14- Display Book Title and User Name to designate Borrowing that occurred 
-within the period ‘3/1/2022’ and ‘10/1/2022’.*/
+within the period â€˜3/1/2022â€™ and â€˜10/1/2022â€™.*/
 
  select B.Title as 'Book Title', U.User_Name as 'User Name'
  from Users U inner join Borrowing BW
@@ -311,7 +311,7 @@ as
 select * from V3_View
 
 
-/* 28- Create a table named ‘ReturnedBooks’ With the Following Structure : then create
+/* 28- Create a table named â€˜ReturnedBooksâ€™ With the Following Structure : then create
 A trigger that instead of inserting the data of returned book 
 checks if the return date is the due date or not if not so the user must pay 
 a fee and it will be 20% of the amount that was paid before.*/
@@ -425,14 +425,14 @@ values(2, 6, 2, '2023-08-07'),
 	  (4, 7, 1, '2022-08-04')   --> it print the ERROR  message that i made in the trigger
 
 /* 31- Create a trigger to prevent anyone from Modifying or Delete or Insert in 
-the Employee table ( Display a message for user to tell him that he can’t 
+the Employee table ( Display a message for user to tell him that he canâ€™t 
 take any action with this Table)*/
 
 create or alter trigger Tri_EmployeeActionPervent
 on Employee
 instead of insert, delete, update
 as
-	print('ERROR you can’t take any action with this Table')
+	print('ERROR you canâ€™t take any action with this Table')
 	
 
 /* 32- Testing Referential Integrity , Mention What Will Happen When:
